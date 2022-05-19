@@ -6,8 +6,8 @@
   <artifactId>antennas-front</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <properties>
-    <jkube.build.strategy>docker</jkube.build.strategy>
-    <jkube.generator.name>quay.io/jules_frere/hackathon</jkube.generator.name>
+    <!--<jkube.build.strategy>docker</jkube.build.strategy>
+    <jkube.generator.name>quay.io/jules_frere/hackathon</jkube.generator.name> -->
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <failsafe.useModulePath>false</failsafe.useModulePath>
     <maven.compiler.release>11</maven.compiler.release>
