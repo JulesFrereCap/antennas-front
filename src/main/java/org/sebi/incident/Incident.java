@@ -9,7 +9,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 @Entity
 public class Incident extends PanacheEntity {
-    public Integer id;
+    public Long id;
     public String description;
     public Date date;
     public boolean status;
