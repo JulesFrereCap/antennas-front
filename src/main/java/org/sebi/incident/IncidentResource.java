@@ -3,6 +3,7 @@ package org.sebi.incident;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -17,7 +18,7 @@ public class IncidentResource {
     IncidentClient incidentClient;
     
     @GET
-    public List<Incident> getIncidents(){
+    public Set<Incident> getIncidents(){
        return incidentClient.getIncidents("secret");
     } 
 }
