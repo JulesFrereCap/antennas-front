@@ -23,6 +23,14 @@ public class IncidentResource {
     
     @GET
     public Set<Incident> getIncidents(){
-       return incidentClient.getIncidents(apiKEY);
-    } 
+        try {
+            return incidentClient.getIncidents(apiKEY);
+        }catch (Exception e) {
+            Incident incident = new Incident();
+            incident.description = "fallback";
+            return Set.of(
+                    incident
+            );
+        }
+    }
 }

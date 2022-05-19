@@ -1,4 +1,5 @@
 package org.sebi.incident;
+import org.eclipse.microprofile.faulttolerance.Retry;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.ws.rs.GET;
@@ -12,5 +13,6 @@ import java.util.Set;
 public interface IncidentClient {
 
     @GET
+    @Retry(maxRetries = 4)
     Set<Incident> getIncidents(@QueryParam("api_key") String key);
 }
